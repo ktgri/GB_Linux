@@ -1,0 +1,37 @@
+17 sudo useradd user_56
+18 cat /etc/passwd
+19 sudo userdel user_56
+20 cat /etc/passwd
+21 sudo groupadd dev
+22 cat /etc/group
+23 sudo useradd -m user_56 -s /bin/bash
+24 sudo passwd user_56
+25 cat /etc/passwd
+26 id ktgri
+27 id user_56
+29 sudo usermod -aG dev user_56
+30 sudo usermod -aG dev ktgri
+31 id ktgri
+32 id user_56
+33 sudo usermod -aG ktgri,sudo user_56
+34 id user_56
+
+37 sudo usermod -G user_56,ktgri,sudo user_56
+38 id user_56
+39 man gpasswd # удаление юзера из группы
+41 sudo cat /etc/shadow
+42 sudo cat /etc/group
+
+44 gpasswd -d user_56 ktgri
+45 sudo gpasswd -d user_56 ktgri
+46 userdel user_56
+47 sudo userdel user_56
+48 cat /etc/passwd
+49 sudo useradd -m superuser -s /bin/bash
+50 sudo passwd superuser
+51 cat /etc/passwd
+52 sudo usermod -aG sudo superuser
+53 sudo visudo
+54 id ktgri
+55 sudo visudo
+56 history > history.txt

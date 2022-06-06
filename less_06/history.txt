@@ -1,0 +1,61 @@
+395 mkdir lesson_06
+396 cd lesson_06/
+397 vi test
+398 cat test
+403 sed '/^$/d' test
+404 cat test
+406 sed '/^$/d' test | tr [:lower:] [:upper:]
+416 nano scrpt_test
+417 chmod +x scrpt_test
+418 ./scrpt_test test test02
+419 ls
+420 cat test
+421 cat test02
+423 # 06.2
+424 ls
+425 cat scrpt_test
+426 cat scrpt_test >> history06
+427 cat history06
+
+428 # 06.2
+431 for y in 20{10..17}; do for m in {01..12}; do for f in {1..7}; do mkdir -p $y/$m; echo Hello, File 00$f from $y/$m > $y/$m/file_$f;done ;done ;done
+432 ls
+433 rm -r 20*
+434 ls -l
+435 for y in 20{10..17}; do for m in {01..12}; do for f in {1..7}; do mkdir -p $y/$m; echo Hello, File 00$f from $y/$m > $y/$m/file_$f;done ;done ;done
+436 tree
+437 sudo apt install tree
+438 tree
+439 cat 2011/05/file_6 2016/08/file_2
+440 rm -r 20*
+441 nano script_folders
+442 chmod +x scrpt_folders
+443 ./scrpt_folders
+444 ls
+445 rm -r 20*
+446 ls
+
+448 # 06.3
+449 ls -l /etc/ | grep -v total | awk '{print $1}'
+450 ls -l /etc/ | grep -v total | awk '{print $1}' | sort | uniq
+452 ls -l /etc/ | grep -v total | awk '{print $1}' | sort | uniq >> 06.3
+453 cat 06.3
+454 echo "ls -l /etc/ | grep -v total | awk '{print $1}' | sort | uniq" >> 06.3
+455 cat 06.3
+
+456 # 06.4
+457 cat /var/log/syslog
+458 cat /var/log/syslog | grep -i load
+466 cat /var/log/syslog | grep -i -n load | grep -n -i ktgri
+
+468 # 06.05
+469 sudo -i
+echo "shutdown -r -t 0" | at now +15 minute
+at -l
+
+14 # 06.6
+18 at -l
+19 nano /etc/crontab
+23 ls -l home/ktgri/
+24 rm -r home/ktgri/etc_20*
+25 ls -l home/ktgri/

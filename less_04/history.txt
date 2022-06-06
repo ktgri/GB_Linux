@@ -1,0 +1,47 @@
+25 echo /etc/ > Lesson04.1.txt
+26 ls
+27 cat Lesson04.1.txt
+28 ls -l /etc/ >> Lesson04.1.txt
+29 cat Lesson04.1.txt
+30 cat /etc/ 2>> Lesson04.1.txt
+31 cat Lesson04.1.txt
+32 cat /etc/* 2>> Lesson04.1.txt
+33 cat Lesson04.1.txt
+
+34 echo Lesson04.2
+35 echo Lesson04.2 > Lesson04.2.txt
+36 cat Lesson04.2.txt
+37 ls -la /etc/
+38 ls -la /etc/ | cut -d " "
+39 ls -la /etc/ | cut -d " " -f 1
+40 ls -la /etc/ | cut -d " " -f 1 | grep total
+41 ls -la /etc/ | cut -d " " -f 1 | grep -v total
+42 ls -la /etc/ | cut -d " " -f 1 | grep -v total | sort | uniq
+43 ls -la /etc/ | cut -d " " -f 1 | grep -v total | sort | uniq >> Lesson04.2.txt
+44 cat Lesson04.2.txt
+
+45 sudo nano /etc/ssh/sshd_config
+46 cat ~/.ssh/id_rsa.pub
+47 ssh-keygen -t rsa
+48 cat ~/.ssh/id_rsa.pub
+49 ls ~/.ssh
+50 pwd
+
+62 sudo nano /etc/ssh/sshd_config
+63 systemctl restart sshd
+# + less04.1 (скрин во вложениях)
+
+64 sudo nano /etc/ssh/sshd_config
+65 systemctl reload sshd
+66 cat > test
+67 cat test
+68 echo "# EOF - не сигнал, просто завершение файла по cntrl+D" >> test
+69 cat test
+
+70 sudo apt install mc
+71 mc
+72 ps -efl | grep mc
+73 kill -9 2283
+74 ps -efl | grep mc
+# + less04.2 (скрин во вложениях)
+75 history > history.txt

@@ -1,0 +1,58 @@
+33 pwd
+34 cd ..
+35 cd ../..
+36 ls
+37 cd ../../../../..
+38 ls
+39 cd /home/ktgri/Desktop/
+40 cd
+42 cd -
+43 ls
+
+44 mkdir lesson_02
+45 mkdir lesson02/dir{01..03}
+46 ls lesson_02
+47 cd ..
+48 cd Desktop/lesson_02/
+49 ls
+55 mkdir dir_01/01.{1..5}
+56 ls dir_01
+57 touch dir_02/file{01..03}
+58 ls dir_02
+59 vi file01
+60 nano file02
+61 cat file01
+62 cat file02
+63 cat -e file02
+# + вложение less02.1 (скрин)
+
+64 cp file02 file02.2
+65 mv file01 file
+66 ls -la
+72 cp -r e02 dir_02/
+73 ls
+74 ls dir_02/
+75 cd dir_02
+76 ls -l
+77 cat file02
+78 mv
+79 cd ..
+80 ls -la
+83 vi dir_02/file02
+84 cat dir_02/file02
+85 cat file02
+86 mv dir_02/* ./
+# + вложение less02.2 (скрин)
+
+88 cd dir_02
+89 ls
+90 ls dir_02/
+91 cd ..
+92 ls -la
+93 cat file02
+94 ls dir_03
+95 rm -rf dir_0*
+96 ls
+# + вложение less02.3 (скрин)
+
+103 history > history.txt

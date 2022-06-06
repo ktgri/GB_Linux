@@ -1,0 +1,152 @@
+363 # 05.1
+364 mkdir less05
+365 cd less05
+366 echo klsdjb > file1
+367 cp file1 file2
+368 ls -l
+369 ln -s file1 file3
+370 ln file1 file4
+371 ls -l
+372 ls -li
+373 rm file1
+374 ls -li
+375 cat file2
+376 cat file3
+377 cat file4
+
+378 # 05.2
+379 mv file2 main
+380 mv file4 link_file1
+382 ln -s main soft_link
+383 ls -li
+384 ln -s $(pwd)/main soft_link_pwd
+385 mkdir links_dir
+386 mv soft_link soft_link_pwd link_file1 ./links_dir/
+387 ls -li
+388 cd links_dir/
+389 ls -li
+390 cd ..
+391 ls
+
+405 # 05.3
+406 echo jefcbcdn > test_chmod1
+407 echo jefcbcdwefnjn4 > test_chmod2
+408 ls -la
+409 chmod ug-rw test_chmod1
+410 chmod o-r test_chmod1
+411 ls -la
+412 chmod o+r test_chmod1
+413 ls -la
+414 chmod ug+rw test_chmod1
+415 ls -la
+416 chmod 000 test_chmod1
+417 chmod 664 test_chmod1
+418 ls -la
+419 chmod 000 test_chmod1
+420 ls -la
+421 chmod 664 test_chmod1
+422 ls -la
+423 chmod u-rw test_chmod2
+424 ls -la
+425 chmod u+rw test_chmod2
+426 ls -la
+427 chmod go-rw test_chmod2
+428 ls -la
+429 chmod 000 test_chmod2
+430 ls -la
+431 chmod 600 test_chmod2
+432 ls -la
+
+433 # 05.4
+436 cat /etc/group | tail -5
+437 mkdir devs_repo
+438 ls -li
+439 chown ktgri:dev devs_repo/
+440 ls -li
+# + вложение (скрин)
+446 sudo -u dev02 touch ./devs_repo/file_dev01
+447 sudo -u dev01 touch ./devs_repo/file_dev01
+448 ls -li devs_repo/
+449 sudo -u dev01 cat ./devs_repo/file_dev01
+450 sudo -u dev02 echo hsdj > ./devs_repo/file_dev01
+451 chmod g+s devs_repo/
+452 sudo -u dev02 echo hsdj > ./devs_repo/file_dev01
+453 ls -li
+454 cd devs_repo/
+455 ls -la
+456 touch file
+457 ls -la
+458 sudo -u dev02 -g dev echo hsdj > ./devs_repo/file_dev01
+459 sudo -u dev02 -g dev echo hsdj > file_dev01
+460 sudo -u dev01 -g dev echo hsdj > file_dev01
+461 sudo -u dev01 -g dev touch file_dev02
+462 ls -la
+463 sudo -u dev02 -g dev echo sjk > file_dev02
+464 cat file
+465 cat file_dev02
+466 mv file_dev02 file_dev001
+467 ls -la
+468 rm file_dev01
+469 ls -la
+470 cat file
+471 echo sdds > file
+472 cat file
+473 sudo -u dev02 echo sjk >> file
+474 cat file
+475 sudo -u dev01 echo sfvsdxvjk >> file
+476 cat file
+477 cat file_dev001
+478 sudo -u dev02 echo sfvsdxvjk >> file_dev001
+479 cat file_dev001
+
+481 # 05.5
+482 mkdir messagee
+485 ls -li
+486 cd messagee/
+487 touch file
+488 sudo -u dev01 touch file02
+489 sudo -u dev02 touch file03
+490 ls -li
+491 rm file02
+492 ls -li
+493 sudo -u dev01 touch file02
+494 cd ..
+495 chmod o+t messagee/
+496 ls -li
+497 cd messagee/
+498 ls
+499 rm file03
+500 ls
+501 cat /etc/passwd | tail -8
+502 cat /etc/passwd | tail -14
+503 ls -li
+504 id dev02
+505 sudo usermod -G dev02 dev02
+506 id dev02
+507 rm file02
+508 ls
+509 cd ..
+510 sudo -u dev02 rm file
+511 ls -li
+512 cd messagee/
+513 ls -la
+514 sudo -u dev02 rm file
+515 cd ..
+
+516 # 05.6
+517 mkdir 06_files_ls/f{01..05}
+518 mkdir 06_files_ls
+519 touch ./06_files_ls/f{01..05}
+520 cd 06_files_ls/
+521 ls -la
+522 cd ..
+523 chmod ugo-r 06_files_ls/
+524 ls 06_files_ls/
+525 ls 06_files_ls/f02
+526 cat 06_files_ls/f02
+527 cat 06_files_ls/f02 -e
+528 echo lksfd > ./06_files_ls/f02
+529 cat 06_files_ls/f02
+530 ls 06_files_ls/
+531 ls messagee/
+532 history > history.txt

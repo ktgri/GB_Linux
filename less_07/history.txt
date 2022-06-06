@@ -1,0 +1,15 @@
+% Total % Received % Xferd Average Speed Time Time Time Current
+Dload Upload Total Spent Left Speed
+100 619 100 619 0 0 16389 0 --:--:-- --:--:-- --:--:-- 16729
+<h1>Welcome to nginx! (8081)</h1>
+root@ktgri-VirtualBox:/etc/apache2/sites-enabled# curl localhost:80 | grep 808
+% Total % Received % Xferd Average Speed Time Time Time Current
+Dload Upload Total Spent Left Speed
+100 619 100 619 0 0 12022 0 --:--:-- --:--:-- --:--:-- 12137
+<h1>Welcome to nginx! (8082)</h1>
+root@ktgri-VirtualBox:/etc/apache2/sites-enabled# curl localhost:80 | grep 808
+% Total % Received % Xferd Average Speed Time Time Time Current
+Dload Upload Total Spent Left Speed
+100 619 100 619 0 0 15080 0 --:--:-- --:--:-- --:--:-- 15475
+<h1>Welcome to nginx! (8083)</h1>
+root@ktgri-VirtualBox:/etc/apache2/sites-enabled# curl localhost:80 | grep 808
